@@ -1,1 +1,0 @@
-print("Hi, {{cookiecutter.author_name}}")
