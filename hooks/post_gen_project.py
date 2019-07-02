@@ -27,7 +27,7 @@ for i in range(number_of_test_cases):
             for src, target in replacements.items():
                 line = line.replace(src, target)
                 print("line2")
-                print(line2)
+                print(line)
         lines.append(line)
     with open(dest_file, 'w') as outfile:
         for line in lines:
