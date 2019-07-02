@@ -15,7 +15,7 @@ for i in range(number_of_test_cases):
     if filename: # file name not specified
         dest_file = "../{{ cookiecutter.project_name }}/testcases/" + filename + ".py"
     # make a copy of template_testcases.py
-    # shutil.copy2(src_file, dest_file)
+    shutil.copy2(src_file, dest_file)
 
     # replacing text in the testcase file
     replacements = { '< docstring description of this testcase >': description }
@@ -25,6 +25,8 @@ for i in range(number_of_test_cases):
             for src, target in replacements.items():
                 line = line.replace(src, target)
         lines.append(line)
+
+    print(lines)
     with open(dest_file, 'w') as outfile:
         for line in lines:
             outfile.write(line)
