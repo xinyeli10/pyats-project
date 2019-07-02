@@ -22,7 +22,7 @@ for i in range(number_of_test_cases):
     lines = []
     with open(dest_file) as infile:
         for line in infile:
-            for src, target in replacements.iteritems():
+            for src, target in replacements.items():
                 line = line.replace(src, target)
         lines.append(line)
     with open(dest_file, 'w') as outfile:
