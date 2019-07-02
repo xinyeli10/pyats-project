@@ -23,6 +23,6 @@ for i in range(number_of_test_cases):
     with open(dest_file, 'r') as file :
         filedata = file.read()
     for src, target in replacements.items():
-        filedata = filedata.replace(src, dest)
+        filedata = filedata.replace(src, target)
     with open(dest_file, 'w') as file:
         file.write(filedata)
