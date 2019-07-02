@@ -2,8 +2,5 @@
     "project_name": "cookiecutter-pyats-project",
     "project_description": "A cookiecutter to generate pyATS scripts.",
     "author_name": "Sarah Li",
-    "testbed_filename": "template_testbed.yaml",
-    "number_of_test_cases": 1,
-    "datafile_filename": "template_datafile.yaml",
-    "datafile_yes_or_no": "yes"
+    "testbed_filename": "template_testbed.yaml"
 }
