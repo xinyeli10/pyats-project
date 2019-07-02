@@ -4,5 +4,5 @@
     "author_name": "Sarah Li",
     "testbed_filename": "template_testbed.yaml",
     "include_datafile" : true,
-    "datafile_filename": "{% if cookiecutter.include_datafile %} template_datafile.yaml {% endif %}"
+    "datafile_filename": "{% if cookiecutter.include_datafile %}template_datafile.yaml{% endif %}"
 }
