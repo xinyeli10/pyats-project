@@ -1,4 +1,5 @@
 import shutil
+import fileinput
 
 print("------------------------------")
 print("POST GEN HOOK\n\n")
@@ -19,16 +20,9 @@ for i in range(number_of_test_cases):
 
     # replacing text in the testcase file
     replacements = { '< docstring description of this testcase >': description }
-    lines = []
-    with open(src_file) as infile:
-        for line in infile:
-            print('line1')
-            print(line)
-            for src, target in replacements.items():
-                line = line.replace(src, target)
-                print("line2")
-                print(line)
-        lines.append(line)
-    with open(dest_file, 'w') as outfile:
-        for line in lines:
-            outfile.write(line)
+    with open(dest_file, 'r') as file :
+        filedata = file.read()
+    for src, target in replacements.items():
+        filedata = filedata.replace(src, dest)
+    with open(dest_file, 'w') as file:
+        file.write(filedata)
