@@ -100,7 +100,7 @@
 
 
 ################################################################################
-# < Testbed Name >
+# {{ cookiecutter.testbed_name }}
 #
 # Location:
 #   < location of testbed >

@@ -1,7 +1,7 @@
 {
     "project_name": "cookiecutter-pyats-project",
     "project_description": "A cookiecutter to generate pyATS scripts.",
-    "testbed_filename": "template_testbed.yaml",
+    "testbed_name": "template_testbed",
     "include_datafile" : true,
-    "datafile_filename": "{% if cookiecutter.include_datafile %}template_datafile.yaml{% endif %}"
+    "datafile_name": "{% if cookiecutter.include_datafile %}template_datafile{% endif %}"
 }
