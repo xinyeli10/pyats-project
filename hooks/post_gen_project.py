@@ -6,6 +6,8 @@ import fileinput
 logger = logging.getLogger(__name__)
 
 def generate_testcases():
+    src_file = "../{{ cookiecutter.project_name }}/testcases/template_testcases.py"
+
     # create a certain number of testcases, as specified by the user
     number_of_testcases = int(input("number_of_testcases: "))
     for i in range(number_of_testcases):
@@ -17,7 +19,6 @@ def generate_testcases():
         print("")
 
         # making a copy of template_testcases.py
-        src_file = "../{{ cookiecutter.project_name }}/testcases/template_testcases.py"
         dest_file = "../{{ cookiecutter.project_name }}/testcases/" + filename + ".py"
         shutil.copy2(src_file, dest_file)
 
