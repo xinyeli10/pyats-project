@@ -9,11 +9,11 @@ def generate_testcases():
     # create a certain number of testcases, as specified by the user
     number_of_testcases = int(input("number_of_testcases: "))
     for i in range(number_of_testcases):
-        filename = input("testcase_%s_name [OPTIONAL]: " % (i + 1))
+        filename = input("testcase_%s_name (OPTIONAL): " % (i + 1))
         if not filename:
             filename = "testcase_" + str(i + 1)
         uid = int(input("testcase_%s_id: " % (i + 1)))
-        description = input("testcase_%s_description [OPTIONAL]: " % (i + 1))
+        description = input("testcase_%s_description (OPTIONAL): " % (i + 1))
         print("\n")
 
         # making a copy of template_testcases.py
@@ -35,8 +35,8 @@ def generate_testcases():
 def generate_datafile():
     src_file = "../{{ cookiecutter.project_name }}/data/template_datafile.yaml"
     
-    include_datafile = input("include_datafile [yes]: ")
-    if 'y' in include_datafile: # yes, include the datafile
+    include_datafile = input("include_datafile? (yes or no): ")
+    if 'y' in include_datafile.lower(): # yes, include the datafile
         filename = input("datafile_name [template_datafile]: ")
         if not filename:
             filename = "template_datafile"
@@ -47,7 +47,7 @@ def generate_datafile():
 
 
 def main():
-    print("\n\n")
+    print("\n")
     generate_testcases()
     generate_datafile()
     
