@@ -33,14 +33,14 @@ def generate_testcases():
 
 
 def generate_datafile():
-    src_file = "../{{ cookiecutter.project_name }}/data/template_datafile.py"
+    src_file = "../{{ cookiecutter.project_name }}/data/template_datafile.yaml"
     
     include_datafile = input("include_datafile [yes]: ")
     if 'y' in include_datafile: # yes, include the datafile
         filename = input("datafile_name [template_datafile]: ")
         if not filename:
             filename = "template_datafile"
-        dest_file = "../{{ cookiecutter.project_name }}/data/" + filename + ".py"
+        dest_file = "../{{ cookiecutter.project_name }}/data/" + filename + ".yaml"
         os.rename(src_file, dest_file)
     else: # no, don't include the datafile
         os.remove(src_file)
