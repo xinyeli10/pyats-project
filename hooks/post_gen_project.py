@@ -30,6 +30,7 @@ def generate_testcases():
                 filedata = filedata.replace(src, target)
         with open(dest_file, 'w') as file:
             file.write(filedata)
+    os.remove(src_file)
 
 
 def generate_datafile():
@@ -47,10 +48,8 @@ def generate_datafile():
 
 
 def main():
-    print("\n")
     generate_testcases()
     generate_datafile()
-    
 
 
 if __name__ == "__main__":
