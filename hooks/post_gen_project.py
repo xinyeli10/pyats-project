@@ -13,7 +13,7 @@ def main():
         filename = input("testcase_%s_name [OPTIONAL]: " % (i + 1))
         uid = int(input("testcase_%s_id: " % (i + 1)))
         description = input("testcase_%s_description [OPTIONAL]: " % (i + 1))
-        logger.info()
+        logger.info("\n")
 
         # making a copy of template_testcases.py
         src_file = "../{{ cookiecutter.project_name }}/testcases/template_testcases.py"
