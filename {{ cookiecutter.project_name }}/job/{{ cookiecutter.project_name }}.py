@@ -40,7 +40,7 @@
 #*   Python Docstrings, PEP 257: 
 #*   URL= http://legacy.python.org/dev/peps/pep-0257/
 #*******************************************************************************
-'''{{ cookiecutter.project_name }}}.py
+'''{{ cookiecutter.project_name }}.py
 
 This is an example docstring for an a job file. The header should describe which
 scripts are included as part of this job, their required topology, and any other
