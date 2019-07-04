@@ -34,7 +34,7 @@
 #*
 #*******************************************************************************
 
-'''template_library.py
+'''{{ cookiecutter.project_name }}.py
 
 < describe your library >
 
