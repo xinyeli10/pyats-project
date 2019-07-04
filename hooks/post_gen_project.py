@@ -33,3 +33,5 @@ def main():
             file.write(filedata)
 
 
+if __name__ == "__main__":
+    main()
