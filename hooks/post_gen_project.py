@@ -14,7 +14,7 @@ def generate_testcases():
             filename = "testcase_" + str(i + 1)
         uid = int(input("testcase_%s_id: " % (i + 1)))
         description = input("testcase_%s_description (OPTIONAL): " % (i + 1))
-        print("\n")
+        print("")
 
         # making a copy of template_testcases.py
         src_file = "../{{ cookiecutter.project_name }}/testcases/template_testcases.py"
@@ -48,6 +48,7 @@ def generate_datafile():
 
 
 def main():
+    print("")
     generate_testcases()
     generate_datafile()
 
