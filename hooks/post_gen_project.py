@@ -12,7 +12,7 @@ def main():
     for i in range(number_of_test_cases):
         filename = input("testcase_%s_name [OPTIONAL]: " % (i + 1))
         if not filename:
-            filename = str(i + 1)
+            filename = "testcase_" + str(i + 1)
         uid = int(input("testcase_%s_id: " % (i + 1)))
         description = input("testcase_%s_description [OPTIONAL]: " % (i + 1))
         logger.info("\n")
@@ -23,7 +23,7 @@ def main():
         shutil.copy2(src_file, dest_file)
 
         # replacing text in the testcase file
-        replacements = { '< describe your testcases >': description }
+        replacements = { '< describe your testcases >': description, "template_testcases": filename }
         with open(dest_file, 'r') as file :
             filedata = file.read()
         for src, target in replacements.items():
